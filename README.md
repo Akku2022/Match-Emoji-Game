@@ -28,6 +28,10 @@ To run this project locally, follow these steps:
     ```
 3. Open the `index.html` file in your preferred web browser.
 
+4. ## OUTPUT:
+   ![image](https://github.com/user-attachments/assets/4a072608-e4fa-453b-8024-d307906e41ca)
+
+
 ## Usage
 1. Select a difficulty level to start the game.
 2. Click on cards to flip them and find matching pairs.
