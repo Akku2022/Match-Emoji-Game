@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+  }
+  h1 {
+    color: #333;
+  }
+  #game-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  #game-controls label, #game-controls select, #game-controls button {
+    font-size: 16px;
+  }
+  #game-board {
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 65vw; /* Adjust max-width as needed */
+  margin: 0 auto; /* Center the game board */
+}
+
+  
+  .card {
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+  }
+  .card .front, .card .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    border-radius: 10px;
+    transition: transform 0.6s;
+  }
+  .card .front {
+    background-color: #fff;
+    color: #333;
+    transform: rotateY(180deg);
+  }
+  .card .back {
+    background-color: #61dafb;
+    color: #fff;
+    transform: rotateY(0);
+  }
+  .card.flip .front {
+    transform: rotateY(0);
+  }
+  .card.flip .back {
+    transform: rotateY(-180deg);
+  }
+  .matched {
+    opacity: 0.5;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #61dafb;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #21a1f1;
+  }
+  #status {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  @media (max-width: 768px) {
+    /* Adjust game board grid and button sizes for smaller screens */
+    #game-board {
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
